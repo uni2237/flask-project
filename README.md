@@ -1,5 +1,3 @@
-<br>
-
 # flask-project
 flask를 이용한 과학 논문 초록 구조화 서비스를 제공하는 웹 플랫폼  <br><br>  
 
@@ -14,8 +12,8 @@ bert를 활용한 과학 논문 초록 구조화 결과를 저장한 csv 파일�
 이 때 해당 웹 플랫폼 통해 논문 초록을 구조화 한 후의 결과를 쉽게 알아볼 수 있습니다.  <br><br>  
 
 # 실행 화면
-![image](https://user-images.githubusercontent.com/26339800/109657452-dd276200-7ba8-11eb-9898-5729f634758e.png)<br><br>  
+![image](https://user-images.githubusercontent.com/26339800/109657452-dd276200-7ba8-11eb-9898-5729f634758e.png)  
 
-![image](https://user-images.githubusercontent.com/26339800/109657567-fb8d5d80-7ba8-11eb-88d3-67c6799c3765.png)<br><br>  
+![image](https://user-images.githubusercontent.com/26339800/109657567-fb8d5d80-7ba8-11eb-88d3-67c6799c3765.png) 
 
-![image](https://user-images.githubusercontent.com/26339800/109657642-11028780-7ba9-11eb-8f7d-771c51ee8773.png)<br><br>  
+![image](https://user-images.githubusercontent.com/26339800/109657642-11028780-7ba9-11eb-8f7d-771c51ee8773.png)
