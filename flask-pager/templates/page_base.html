@@ -1,0 +1,27 @@
+{% extends "bootstrap4_base.html" %}
+{% block title %}초록 자동 구조화 예측 시각화 web{% endblock %}
+
+{% block navbar %}
+<header>
+    <div class="navbar navbar-dark bg-dark box-shadow">
+        <div class="container d-flex justify-content-between">
+            <a href="#" class="navbar-brand d-flex align-items-center">
+
+                <strong>초록 구조화 예측 [EF App Res Cont]</strong>
+            </a>
+        </div>
+    </div>
+</header>
+{% endblock %}
+
+{% block content %}
+<main role="main" class="container">
+    {% for message in get_flashed_messages() %}
+        <div class="alert alert-warning" role="alert">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            {{ message }}
+        </div>
+    {% endfor %}
+    {% block page_content %}{% endblock %}
+</main>
+{% endblock %}

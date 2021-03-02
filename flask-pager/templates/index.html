@@ -1,0 +1,61 @@
+{% extends "page_base.html" %}
+{% import "_macros.html" as macros %}
+{% block page_content %}
+
+<h4 class="mt-5">[EF] : Establishing Field, [App] : Approach, [Res] : Result, [Cont] : Contribution</h4>
+<!--{{ macros.pagination_widget(pages, 'index') }}-->
+<div style=""position:relativel; height:700px;>
+<br>
+</div>
+
+
+    <table border=3 width="1200" height="200" cellspacing=0 cellpadding=0 id="abs">
+
+        <colgroup>
+            <col width="5%"/>
+            <col width="70%"/>
+            <col width="6%"/>
+            <col width="19%"/>
+        </colgroup>
+
+    <tr height="40">
+        <td align=center ><strong>순서</strong></td>
+        <td align=center ><strong>초록</strong></td>
+        <td align=center ><strong>태그 결과</strong></td>
+        <td align=center ><strong>태그 설명</strong></td>
+    </tr>
+
+    {% for item in data_to_show[0] %}
+    <tr>
+        <td align=center> <strong>{{ item.index }} </strong></td>
+
+        {% if item.pred=="EF": %}
+        <td align=center bgcolor="#f78a88"> {{ item.sent }} </td>
+        <td align=center bgcolor="#f78a88"> <strong>{{ item.pred }}</strong> </td>
+        <td align=center bgcolor="#f78a88"> 분야설명 , 분야의 문제점<br>최근 연구 및 소식 </td>
+        {% elif item.pred=="App":  %}
+        <td align=center bgcolor="#ffc180"> {{ item.sent }} </td>
+        <td align=center bgcolor="#ffc180"> <strong>{{ item.pred }}</strong> </td>
+        <td align=center bgcolor="#ffc180"> 주 방법론/방향 , 방법론 구체화<br>방법론 내 수행 , 방법론의 목표 </td>
+        {% elif item.pred=="Res":  %}
+        <td align=center bgcolor="#faf575"> {{ item.sent }} </td>
+        <td align=center bgcolor="#faf575"> <strong>{{ item.pred }}</strong> </td>
+        <td align=center bgcolor="#faf575"> 실험 결과 , Competition 결과 </td>
+        {%  else  %}
+        <td align=center bgcolor="#aaf76a"> {{ item.sent }} </td>
+        <td align=center bgcolor="#aaf76a"> <strong>{{ item.pred }}</strong> </td>
+        <td align=center bgcolor="#aaf76a"> 코드/결과물 공유 , 분야에 대한 공헌 </td>
+        {% endif %}
+
+    </tr>
+    {% endfor %}
+    </table>
+
+
+
+<br>
+<div align=center style="position:absolute; bottom:0px;">
+{{ macros.pagination_widget(pages, 'index') }}
+
+</div>
+{% endblock %}
